@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ContactDetailsActivity">
+    <LinearLayout
+        android:id="@+id/firstLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ppCardView"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="10dp"
+            android:focusableInTouchMode="true"
+            android:shape="ring"
+            android:visibility="visible"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/contactImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/pp" />
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="5dp">
+
+            <FrameLayout
+                android:id="@+id/pFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/tvborder" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/tvborder"
+                android:padding="2dp"
+                android:text="  Particular   "
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/tv1"
+                android:background="@drawable/tvborder"
+                android:padding="2dp"
+                android:text="   Address   "
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/firstLL"
+        android:layout_margin="15dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:padding="10dp"
+            android:id="@+id/remarkRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/tvborder" />
+
+        <TextView
+            android:id="@+id/event1Tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/event2Tv"
+            android:background="@drawable/tvborder"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Event 1"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/event2Tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/tvborder"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Event 2"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/event3Tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/event2Tv"
+            android:background="@drawable/tvborder"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Event 3"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </RelativeLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addContactFabButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:visibility="gone"
+    />
+</RelativeLayout>
+
